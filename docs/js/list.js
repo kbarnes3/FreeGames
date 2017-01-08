@@ -3,6 +3,11 @@
 
     $(document).ready(function () {
         var all_games = [
+            { category: 'Party/Big Group Games',
+               games: [
+                { name: 'Wits &amp; Wagers Party', photo: 'WitsWagers.jpg', },
+                { name: 'Big Bang Theory Trivia Game', photo: 'BigBangTheory.jpg', },
+               ], },
             { category: 'Classic Games',
                games: [
                 { name: 'Connect 4', photo: 'Connect4.jpg' },
