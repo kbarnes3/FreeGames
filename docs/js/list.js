@@ -3,6 +3,11 @@
 
     $(document).ready(function () {
         var all_games = [
+            { category: 'Puzzles',
+               games: [
+                { name: 'Puppy puzzle', photo: 'Puppy.jpg', },
+                { name: 'Dolphin puzzle', photo: 'Dolphin.jpg', },
+               ], },
             { category: 'Party/Big Group Games',
                games: [
                 { name: 'Wits &amp; Wagers Party', photo: 'WitsWagers.jpg', },
