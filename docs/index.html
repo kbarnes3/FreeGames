@@ -142,43 +142,6 @@
                 </div>
             </div>
 
-            <!-- Geeky Games -->
-            <div class="row">
-                <div class="col-md-6 col-md-offset-1">
-                    <h2 class="text-center">Geeky Games</h2>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-8 col-md-push-4">
-                    <h4><a href="https://boardgamegeek.com/boardgame/2453/blokus">Blokus</a></h4>
-                </div>
-                <div class="col-md-4 col-md-pull-8">
-                     <a href="photos/Blokus.jpg" data-toggle="lightbox" data-title="Blokus">
-                        <img src="photos/Blokus.jpg" class="img-rounded img-responsive">
-                    </a>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-8 col-md-push-4">
-                    <h4><a href="https://boardgamegeek.com/boardgame/36218/dominion">Dominion</a></h4>
-                </div>
-                <div class="col-md-4 col-md-pull-8">
-                     <a href="photos/Dominion.jpg" data-toggle="lightbox" data-title="Dominion">
-                        <img src="photos/Dominion.jpg" class="img-rounded img-responsive">
-                    </a>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-8 col-md-push-4">
-                    <h4><a href="https://boardgamegeek.com/boardgame/9674/ingenious">Ingenious</a></h4>
-                </div>
-                <div class="col-md-4 col-md-pull-8">
-                     <a href="photos/Ingenious.jpg" data-toggle="lightbox" data-title="Ingenious">
-                        <img src="photos/Ingenious.jpg" class="img-rounded img-responsive">
-                    </a>
-                </div>
-            </div>
-
         </div><!-- /container -->
 
         <footer class="footer" role="contentinfo">
@@ -192,9 +155,11 @@
         <script>
             $(document).ready(function () {
                 var all_games = [
-                    { category: 'Dynamic Games',
+                    { category: 'Geeky Games',
                        games: [
-                        { name: 'Ingenious', photo: 'Ingenious.jpg' },
+                        { name: 'Blokus', photo: 'Blokus.jpg', uri: 'https://boardgamegeek.com/boardgame/2453/blokus' },
+                        { name: 'Dominion', photo: 'Dominion.jpg', uri: 'https://boardgamegeek.com/boardgame/36218/dominion' },
+                        { name: 'Ingenious', photo: 'Ingenious.jpg', uri: 'https://boardgamegeek.com/boardgame/9674/ingenious' },
                        ], },
                 ];
 
@@ -214,22 +179,41 @@
                     var games_length = games_list.length;
                     for (var j = 0; j < games_length; j++) {
                         var game = games_list[j];
-                        list_html.append(
-                            '<div class="row">' +
-                                '<div class="col-md-8 col-md-push-4">' +
-                                    '<h4>' + 
-                                        '<a href="https://boardgamegeek.com/boardgame/9674/ingenious">' +
-                                            game.name +
+
+                        if (game.uri) {
+                            list_html.append(
+                                '<div class="row">' +
+                                    '<div class="col-md-8 col-md-push-4">' +
+                                        '<h4>' + 
+                                            '<a href="' + game.uri + '">' +
+                                                game.name +
+                                            '</a>' +
+                                        '</h4>' +
+                                    '</div>' +
+                                    '<div class="col-md-4 col-md-pull-8">' +
+                                        '<a href="photos/' + game.photo + '" data-toggle="lightbox"' +
+                                            'data-title="' + game.name + '">' +
+                                            '<img src="photos/' + game.photo + '" class="img-rounded img-responsive">' +
                                         '</a>' +
-                                    '</h4>' +
-                                '</div>' +
-                                '<div class="col-md-4 col-md-pull-8">' +
-                                    '<a href="photos/' + game.photo + '" data-toggle="lightbox"' +
-                                        'data-title="' + game.name + '">' +
-                                        '<img src="photos/' + game.photo + '" class="img-rounded img-responsive">' +
-                                    '</a>' +
-                                '</div>' +
-                            '</div>');
+                                    '</div>' +
+                                '</div>');
+                        }
+                        else {
+                            list_html.append(
+                                '<div class="row">' +
+                                    '<div class="col-md-8 col-md-push-4">' +
+                                        '<h4>' + 
+                                            game.name +
+                                        '</h4>' +
+                                    '</div>' +
+                                    '<div class="col-md-4 col-md-pull-8">' +
+                                        '<a href="photos/' + game.photo + '" data-toggle="lightbox"' +
+                                            'data-title="' + game.name + '">' +
+                                            '<img src="photos/' + game.photo + '" class="img-rounded img-responsive">' +
+                                        '</a>' +
+                                    '</div>' +
+                                '</div>');
+                        }
                     }
                 }
 
