@@ -40,41 +40,40 @@
             var games_length = games_list.length;
             for (var j = 0; j < games_length; j++) {
                 var game = games_list[j];
+                var game_html = 
+                    '<div class="row">' +
+                        '<div class="col-md-8 col-md-push-4">' +
+                            '<h4>';
 
                 if (game.uri) {
-                    list_html.append(
-                        '<div class="row">' +
-                            '<div class="col-md-8 col-md-push-4">' +
-                                '<h4>' + 
+                    game_html +=
                                     '<a href="' + game.uri + '">' +
                                         game.name +
-                                    '</a>' +
-                                '</h4>' +
-                            '</div>' +
-                            '<div class="col-md-4 col-md-pull-8">' +
-                                '<a href="photos/' + game.photo + '" data-toggle="lightbox"' +
-                                    'data-title="' + game.name + '">' +
-                                    '<img src="photos/' + game.photo + '" class="img-rounded img-responsive">' +
-                                '</a>' +
-                            '</div>' +
-                        '</div>');
+                                    '</a>';
                 }
                 else {
-                    list_html.append(
-                        '<div class="row">' +
-                            '<div class="col-md-8 col-md-push-4">' +
-                                '<h4>' + 
-                                    game.name +
-                                '</h4>' +
-                            '</div>' +
+                    game_html +=
+                                    game.name;
+                }
+
+                game_html +=
+                            '</h4>' +
+                        '</div>';
+
+                if (game.photo) {
+                    game_html += 
                             '<div class="col-md-4 col-md-pull-8">' +
                                 '<a href="photos/' + game.photo + '" data-toggle="lightbox"' +
                                     'data-title="' + game.name + '">' +
                                     '<img src="photos/' + game.photo + '" class="img-rounded img-responsive">' +
                                 '</a>' +
-                            '</div>' +
-                        '</div>');
+                            '</div>';
                 }
+
+                game_html +=
+                    '</div>';
+
+                list_html.append(game_html);
             }
         }
 
