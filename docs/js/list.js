@@ -12,6 +12,7 @@
                games: [
                 { name: 'Wits &amp; Wagers Party', photo: 'WitsWagers.jpg', },
                 { name: 'Big Bang Theory Trivia Game', photo: 'BigBangTheory.jpg', },
+                { name: 'The Original Left Center Right Dice Game', photo: 'LCR.jpg', uri: 'https://boardgamegeek.com/boardgame/3522/lcr' },
                ], },
             { category: 'Classic Games',
                games: [
