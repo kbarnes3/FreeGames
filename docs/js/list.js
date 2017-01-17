@@ -3,24 +3,9 @@
 
     $(document).ready(function () {
         var all_games = [
-            { category: 'Puzzles',
+            { category: 'Nothing here',
                games: [
-                { name: 'Puppy puzzle', photo: 'Puppy.jpg', },
-                { name: 'Dolphin puzzle', photo: 'Dolphin.jpg', },
-               ], },
-            { category: 'Party/Big Group Games',
-               games: [
-                { name: 'Wits &amp; Wagers Party', photo: 'WitsWagers.jpg', },
-                { name: 'Big Bang Theory Trivia Game', photo: 'BigBangTheory.jpg', },
-                { name: 'The Original Left Center Right Dice Game', photo: 'LCR.jpg', uri: 'https://boardgamegeek.com/boardgame/3522/lcr' },
-               ], },
-            { category: 'Classic Games',
-               games: [
-                { name: 'Connect 4', photo: 'Connect4.jpg' },
-                { name: 'Mancala', photo: 'Mancala.jpg', },
-                { name: 'Star Wars Operation: Silly Skill Game', photo: 'StarWarsOperation.jpg' },
-                { name: 'Transformers Monopoly: Collector\'s Edition', photo: 'TransformersMonopoly.jpg', },
-                { name: '3 in 1 Game Set - Chinese Checkers, Chess, Checkers', photo: '3in1.jpg', },
+                { name: 'Check back later', },
                ], },
         ];
 
