@@ -22,10 +22,6 @@
                 { name: 'Transformers Monopoly: Collector\'s Edition', photo: 'TransformersMonopoly.jpg', },
                 { name: '3 in 1 Game Set - Chinese Checkers, Chess, Checkers', photo: '3in1.jpg', },
                ], },
-            { category: 'Geeky Games',
-               games: [
-                { name: 'Ingenious', photo: 'Ingenious.jpg', uri: 'https://boardgamegeek.com/boardgame/9674/ingenious' },
-               ], },
         ];
 
         var list_html = $('#game_list');
