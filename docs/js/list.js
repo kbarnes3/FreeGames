@@ -24,7 +24,6 @@
                ], },
             { category: 'Geeky Games',
                games: [
-                { name: 'Blokus', photo: 'Blokus.jpg', uri: 'https://boardgamegeek.com/boardgame/2453/blokus' },
                 { name: 'Ingenious', photo: 'Ingenious.jpg', uri: 'https://boardgamegeek.com/boardgame/9674/ingenious' },
                ], },
         ];
